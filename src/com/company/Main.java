@@ -10,8 +10,6 @@ public class Main {
 	// write your code here
         class Library{
 
-             private Book book;
-             private Integer[] myInts = new Integer[10];
              List<Book> books= new ArrayList<>();
 
              Library(){
