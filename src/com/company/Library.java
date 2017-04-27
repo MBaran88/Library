@@ -14,38 +14,42 @@ public class Library {
         allBooks.addAll(acquiredBooks);
     }
 
-    public Book borrow(String title){
+    public Book borrow(String title) {
+        return searchByBookTitle(title);
+    }
+    public boolean returnBook (Book bookToReturn){
 
-
-        return null;
+        return false;
     }
 
     public void addBook(Book book) {
 
         allBooks.add(book);
     }
-    public void deleteBook(Book book)
-    {allBooks.remove(book)}
 
-    public void deleteBook(Book bookTitle)
-    {String bookTitle)
-     Book isBookFound = searchByBookTitle(bookTitle);
-if (isBookFound != null)
-    allBooks.remove(isBookFound)
-            }
-        }
+    public void deleteBook(Book book) {
+        allBooks.remove(book)
+    }
+
+    public void deleteBook(Book bookTitle) {
+        String bookTitle)
+        Book isBookFound = searchByBookTitle(bookTitle);
+        if (isBookFound != null)
+            allBooks.remove(isBookFound)
+    }
+}
 
 
-    public Book searchByBookTitle(String title){
+    public Book searchByBookTitle(String title) {
         boolean isBookFound = false;
         int idx = 0;
         Book book = null;
 
-        while (isBookFound == false){
+        while (isBookFound == false) {
             Book book = allBooks.get(idx);
             isBookFound = book.getTitle().equals(title);
             idx = idx + 1;
-        return book;
+            return book;
+        }
     }
-}
 
