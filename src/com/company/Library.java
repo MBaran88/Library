@@ -14,6 +14,12 @@ public class Library {
         allBooks.addAll(acquiredBooks);
     }
 
+    public Book borrow(String title){
+
+
+        return null;
+    }
+
     public void addBook(Book book) {
 
         allBooks.add(book);
@@ -32,8 +38,10 @@ public class Library {
         isBookToDelete = book.getTitle().equals(bookTitle);
         idx = idx + 1;
     }
-    if (isBookToDelete == true)
-     allBooks.remove(book);
+    if (isBookToDelete == true) {
+        allBooks.remove(book);
+        System.out.println("removed book:" + book.getTitle());
+    }
         {
             for (int i = 0; i < allBooks.size(); i++) {
                 Book book = allBooks.get(i);
@@ -42,5 +50,16 @@ public class Library {
         }
     }
 
+    public Book searchByBookTitle(String title){
+        boolean isBookFound = false;
+        int idx = 0;
+        Book book = null;
+
+        while (isBookFound == false){
+            Book book = allBooks.get(idx);
+            isBookFound = book.getTitle().equals(title);
+            idx = idx + 1;
+        return book;
+    }
 }
 

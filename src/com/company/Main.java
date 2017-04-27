@@ -23,9 +23,11 @@ public class Main {
         //Library.addBook(book2);
         //Library.addBook(book3);
         library.deleteBook(book2);
+        library.deleteBook(bookTitle"Pan_Tadeusz");
+
+        library.borrow(title: "Ogniem i mieczem");
 
         System.out.println(library.allBooks.size());
 
-        System.out.println(library.allBooks.size());
     }
 }
