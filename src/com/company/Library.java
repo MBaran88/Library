@@ -27,28 +27,14 @@ public class Library {
     public void deleteBook(Book book)
     {allBooks.remove(book)}
 
-    public void deleteBook(Book book)
+    public void deleteBook(Book bookTitle)
     {String bookTitle)
-       boolean isBookToDelete = false;
-       int idx = 0;
-       Book book = null;
-
-       while (isBookToDelete == false){
-           Book book = allBooks.get(idx);
-        isBookToDelete = book.getTitle().equals(bookTitle);
-        idx = idx + 1;
-    }
-    if (isBookToDelete == true) {
-        allBooks.remove(book);
-        System.out.println("removed book:" + book.getTitle());
-    }
-        {
-            for (int i = 0; i < allBooks.size(); i++) {
-                Book book = allBooks.get(i);
-                boolean isBookToDelete = book.getTitle() .equals(bookTitle);
+     Book isBookFound = searchByBookTitle(bookTitle);
+if (isBookFound != null)
+    allBooks.remove(isBookFound)
             }
         }
-    }
+
 
     public Book searchByBookTitle(String title){
         boolean isBookFound = false;
